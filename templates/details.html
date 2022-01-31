@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="/static/details.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="http://d2e9h3gjmozu47.cloudfront.net/brand.png" class="logo" alt="logo">
+        <ul class="menu">
+            <li><a href="/" target="">Home</a></li>
+            <li><a href="/st-details" target="" style="background-color: white;color: black;">Student Details</a></li>
+            <li><a href="/contact-us" target="">Contact Us</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="outer_class">
+        <h3>Search Student Here</h3>
+        <div class="inner_class">
+           <form action="" method="POST">
+                <!-- <label for="sid"><b>SID:</b></label>
+                <input type="text" id="sid" name="sid" placeholder="Enter Sid..."><br> -->
+               <label for="Fname"><b>First Name:</b></label>
+               <input type="text" id="Fname" name="Fname" placeholder="Enter First Name..."><br>
+               <label for="Lname"><b>Last Name:</b></label>
+               <input type="text" id="Lname" name="Lname" placeholder="Enter Last Name..."><br>
+               <input type="submit" value="Submit">
+           </form>
+        </div>
+    </div>
+    {% for student in studentd %}
+    <div class="profile"><img src="static/images/{{student[5]}}.PNG" alt="{{student[5]}}"></div>
+    <div class="profile_table">
+        <table>
+           <tr>
+               <th>Name :</th>
+               <td>{{student[0]}} {{student[1]}}</td>
+           </tr>
+           <tr>
+               <th>Room-No :</th>
+               <td>{{student[2]}}</td>
+           </tr>
+           <tr>
+                <th>Department :</th>
+                <td>{{student[3]}}</td>
+        </tr>
+        <tr>
+            <th>Year :</th>
+            <td>{{student[4]}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Contact_Us.css">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img src="http://d2e9h3gjmozu47.cloudfront.net/brand.png" class="logo" alt="logo">
+        <ul class="menu">
+            <li><a href="/" target="" >Home</a></li>
+            <li><a href="/add-data" target="">Add Data</a></li>
+            <li><a href="/update" target="" style="background-color: white;color: black;">Update Data</a></li>
+            <li><a href="/remove" target="">Remove Data</a></li>
+            <li><a href="/st-details" target="">Student Details</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>STUDENT-DETAILS UPDATE:</h2>
+        <form action="" method="POST">
+            <p style="color: red;">{{msg}}</p>
+            <div class="fdiv1">
+                <h3>Enter Student name whose deatails to be updated :</h3><br>
+                <label for="fname"><strong>First Name:</strong></label>
+                <input type="text" id="fname" name="fname" placeholder="Enter Student First name..."><br>
+            </div>
+            <div>
+                <label for="lname"><strong>Second Name:</strong></label>
+                <input type="text" id="lname" name="lname" placeholder="Enter Student Second name..."><br>
+            </div>
+            <br><hr><br>
+            <div class="fdiv1">
+                <h3>Enter Student's New Details :</h3><br>
+                <p><span style="color: red;">Note : </span>Enter Only those values you want to update !</p><br>
+                <label for="newfname"><strong>New First Name:</strong></label>
+                <input type="text" id="newfname" name="newfname" placeholder="Enter Student First name..."><br>
+            </div>
+            <div>
+                <label for="newlname"><strong>New Last Name:</strong></label>
+                <input type="text" id="newlname" name="newlname" placeholder="Enter Student Second name..."><br>
+            </div>
+            <div>
+                <label for="Room"><strong>Room No:</strong></label>
+                <input type="text" id="Room" name="Room" placeholder="Enter New Room no..."><br>
+            </div>
+            <div>
+                <label for="Dept"><strong>Department:</strong></label>
+                <input type="text" id="Dept" name="Dept" placeholder="Enter Student Department..."><br>
+            </div>
+            <div>
+                <label for="Year"><strong>Year:</strong></label>
+                <input type="text" id="Year" name="Year" placeholder="Enter Student Current Studying Year..."><br>
+            </div>
+            <div class="div_button"><button type="submit" disabled>Submit</button></div>
+        </form>
+    </div>
+</body>
+</html>
